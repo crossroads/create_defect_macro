@@ -9,7 +9,6 @@ class CreateDefectMacroTest < Test::Unit::TestCase
     create_defect = CreateDefectMacro.new(nil, project(FIXTURE), nil)
     result = create_defect.execute
     assert result.include?("createDefect('gh', 564)")
-    assert result.include?("createDefect('gh', 564)")
   end
 
 end
