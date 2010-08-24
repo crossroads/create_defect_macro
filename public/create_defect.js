@@ -23,7 +23,7 @@ function createDefect(project, thisCard) {
   return function() {
     var name = document.createdefectform.name.value;
 
-    var spinner = '<img class="ajax-spinner" src="images/spinner.gif" alt="Loading..."/>';
+    var spinner = '<img class="ajax-spinner" src="/images/spinner.gif" alt="Loading..."/>';
     $('submit-defect').replace(spinner);
 
     createCard('Defect', name, {'Story': thisCard, 'Defect Status': 'New'});
