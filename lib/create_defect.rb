@@ -14,7 +14,7 @@ class CreateDefectMacro
   private
   def script
     <<-SCRIPT
-  <script src="/plugin_assets/create_defect/create_defect.js"></script>
+  <script src="/plugin_assets/create_defect_macro/create_defect.js"></script>
   <script>
     create = createDefect('#{project}', #{this_card['number']});
   </script>
