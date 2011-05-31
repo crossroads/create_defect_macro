@@ -19,9 +19,9 @@ class CreateDefectMacro
   <script>
     create = createDefect('#{project}', #{this_card['number']});
     
-    document.createdefectform.defect_body.value = "h3. Steps to Reproduce" + "\n\n\n\n" +
-                                                  "h3. Actual Result"      + "\n\n\n\n" +
-                                                  "h3. Expected Result" + "\n\n\n";
+    document.createdefectform.defect_body.value = "h3. Steps to Reproduce" + "\\n\\n\\n\\n" +
+                                                  "h3. Actual Result"      + "\\n\\n\\n\\n" +
+                                                  "h3. Expected Result" + "\\n\\n\\n";
   </script>
 SCRIPT
   end
