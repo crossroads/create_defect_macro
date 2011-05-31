@@ -10,19 +10,13 @@ function createDefect(project, thisCard) {
     for (var key in properties) {
       params += param(key, properties[key]);
     }
-    post('/api/v2/projects/'+project+'/cards.xml', params);
+    post('/api/v2/projects/'+project+'/cards.xml?'+params);
   };
 
-  function post(url, params) {
-    var http = new XMLHttpRequest();
-    http.open("POST", url, true);
-
-    //Send the proper header information along with the request
-    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    http.setRequestHeader("Content-length", params.length);
-    http.setRequestHeader("Connection", "close");
-
-    http.send(params);
+  function post(url) {
+    var request = new XMLHttpRequest();
+    request.open('POST', url, false);
+    request.send();
   }
 
   return function() {
