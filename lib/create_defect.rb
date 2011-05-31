@@ -33,7 +33,7 @@ STYLES
 <br>
 <a onclick="$('createdefect').show()" class="link_as_button" href="javascript:void(0)">Create New Defect</a>
 
-<div style="" id="createdefect">
+<div style="display:none" id="createdefect">
   <form name="createdefectform">
     <br>
     Title:
