@@ -26,7 +26,7 @@ function createDefect(project, thisCard) {
     var spinner = '<img class="ajax-spinner" src="/images/spinner.gif" alt="Loading..."/>';
     $('submit-defect').replace(spinner);
 
-    createCard('Defect', title, body, {'Story': thisCard, 'Defect Status': 'New'});
+    createCard('Defect', title, body, {'Deliverable': thisCard, 'Defect Status': 'New'});
 
     window.location.reload(true);
   };

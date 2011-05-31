@@ -30,12 +30,20 @@ STYLES
 
   def form
     <<-FORM
-<div id="createdefect">
+<br>
+<a onclick="$('createdefect').show()" class="link_as_button" href="javascript:void(0)">Create New Defect</a>
+
+<div style="" id="createdefect">
   <form name="createdefectform">
-    <p>New defect:</p>
-    <input type="text" style="width: 350px;" name="defect_title">
-    <br/>
-    <textarea rows="11" style="width: 350px;" name="defect_body">h3. Steps to Reproduce
+    <br>
+    Title:
+    <br>
+    <input type="text" name="defect_title" style="width: 350px;">
+    <br><br>
+    Description:
+    <br>
+
+    <textarea name="defect_body" style="width: 350px;" rows="11">h3. Steps to Reproduce
 
 
 
@@ -46,8 +54,9 @@ h3. Actual Result
 h3. Expected Result
 
 </textarea>
+    <br><br>
     <div id="submit-defect">
-      <input type="submit" onclick="create();" value="Create">
+      <input type="submit" value="Save Defect" onclick="create();">
     </div>
   </form>
 </div>
