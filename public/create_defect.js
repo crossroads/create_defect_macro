@@ -27,7 +27,7 @@ function createDefect(project, thisCard) {
 
   return function() {
     var title = document.createdefectform.defect_title.value;
-    var body = document.createdefectform.defect_body.value;
+    var body = escape(document.createdefectform.defect_body.value);
 
     var spinner = '<img class="ajax-spinner" src="/images/spinner.gif" alt="Loading..."/>';
     $('submit-defect').replace(spinner);

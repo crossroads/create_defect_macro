@@ -18,6 +18,10 @@ class CreateDefectMacro
   <script src="/plugin_assets/create_defect_macro/create_defect.js"></script>
   <script>
     create = createDefect('#{project}', #{this_card['number']});
+    
+    document.createdefectform.defect_body.value = "h3. Steps to Reproduce" + "\n\n\n\n" +
+                                                  "h3. Actual Result"      + "\n\n\n\n" +
+                                                  "h3. Expected Result" + "\n\n\n";
   </script>
 SCRIPT
   end
@@ -43,17 +47,7 @@ STYLES
     Description:
     <br>
 
-    <textarea name="defect_body" style="width: 350px;" rows="11">h3%2E; Steps to Reproduce
-
-
-
-h3%2E; Actual Result
-
-
-
-h3%2E; Expected Result
-
-</textarea>
+    <textarea name="defect_body" style="width: 350px;" rows="11"></textarea>
     <br><br>
     <div id="submit-defect">
       <input type="submit" value="Save Defect" onclick="create();">
