@@ -36,15 +36,22 @@ STYLES
 <div style="display:none" id="createdefect">
   <form name="createdefectform">
     <br>
-    Title:
-    <br>
+    
+    Title:<br>
     <input type="text" name="defect_title" style="width: 350px;">
     <br><br>
-    Description:
-    <br>
-
+    
+    Description:<br>
     <textarea name="defect_body" style="width: 350px;" rows="11"></textarea>
     <br><br>
+    
+    Team:<br>
+    <select name="defect_team" style="width: 350px;">
+      <option value="Apple" selected="true">Apple</option>
+      <option value="Orange">Orange</option>
+    </select>
+    <br><br>
+    
     <div id="submit-defect">
       <input type="submit" value="Save Defect" onclick="create();">
     </div>

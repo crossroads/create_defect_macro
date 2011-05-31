@@ -22,11 +22,15 @@ function createDefect(project, thisCard) {
   return function() {
     var title = document.createdefectform.defect_title.value;
     var body = escape(document.createdefectform.defect_body.value);
+    // Fetch selected value from defect_team select list.
+    var team = document.createdefectform.defect_team.options[document.createdefectform.defect_team.selectedIndex].value;
 
     var spinner = '<img class="ajax-spinner" src="/images/spinner.gif" alt="Loading..."/>';
     $('submit-defect').replace(spinner);
 
-    createCard('Defect', title, body, {'Deliverable': thisCard, 'Defect Status': 'New'});
+    createCard('Defect', title, body, {'Deliverable': thisCard,
+                                       'Defect Status': 'New',
+                                       'Team': team});
 
     window.location.reload(true);
   };
