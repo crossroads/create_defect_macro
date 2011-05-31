@@ -17,7 +17,7 @@ class CreateDefectMacro
     <<-SCRIPT
   <script src="/plugin_assets/create_defect_macro/create_defect.js"></script>
   <script>
-    create = createDefect('#{project}', #{this_card['number']});
+    create = createDefect('#{project}', '#{user}', #{this_card['number']});
   </script>
 SCRIPT
   end
@@ -71,6 +71,10 @@ FORM
 
   def this_card
     @project.execute_mql('SELECT Number WHERE Number = THIS CARD.Number').first
+  end
+
+  def user
+    @current_user.login
   end
 
 end

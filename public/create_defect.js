@@ -1,4 +1,4 @@
-function createDefect(project, thisCard) {
+function createDefect(project, user, thisCard) {
 
   function param(name, value) {
     return '&'+'card[properties][][name]='+name+
@@ -30,6 +30,7 @@ function createDefect(project, thisCard) {
 
     createCard('Defect', title, body, {'Deliverable': thisCard,
                                        'Defect Status': 'New',
+                                       'Reported By': user,
                                        'Team': team});
 
     window.location.reload(true);
