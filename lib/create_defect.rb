@@ -30,9 +30,11 @@ STYLES
 
   def form
     <<-FORM
-<br>
-<a onclick="$('createdefect').show()" class="link_as_button" href="javascript:void(0)">Create New Defect</a>
-
+    
+<div id="createdefectbutton">
+  <br>
+  <a onclick="$('createdefect').show(); $('createdefectbutton').hide();" class="link_as_button" href="javascript:void(0)">Create New Defect</a>
+</div>
 <div style="display:none" id="createdefect">
   <form name="createdefectform">
     <br>
