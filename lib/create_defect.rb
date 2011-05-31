@@ -52,6 +52,10 @@ STYLES
     </select>
     <br><br>
     
+    <input type="checkbox" name="defect_owner">
+    <label for="defect_owner" style="display: inline; padding: 5px; vertical-align: top;">Make me the owner of this defect.</label>
+    <br><br>
+    
     <div id="submit-defect">
       <input type="submit" value="Save Defect" onclick="create();">
     </div>
