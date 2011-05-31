@@ -5,8 +5,8 @@ function createDefect(project, thisCard) {
            '&'+'card[properties][][value]='+value;
   }
 
-  function createCard(type, name, properties) {
-    var params = 'card[name]='+name+'&card[card_type_name]='+type;
+  function createCard(type, name, body, properties) {
+    var params = 'card[name]='+name+'&card[description]='+body+'&card[card_type_name]='+type;
     for (var key in properties) {
       params += param(key, properties[key]);
     }
@@ -19,14 +19,14 @@ function createDefect(project, thisCard) {
     request.send();
   }
 
-
   return function() {
-    var name = document.createdefectform.name.value;
+    var title = document.createdefectform.defect_title.value;
+    var body = document.createdefectform.defect_body.value;    
 
     var spinner = '<img class="ajax-spinner" src="/images/spinner.gif" alt="Loading..."/>';
     $('submit-defect').replace(spinner);
 
-    createCard('Defect', name, {'Story': thisCard, 'Defect Status': 'New'});
+    createCard('Defect', title, body, {'Story': thisCard, 'Defect Status': 'New'});
 
     window.location.reload(true);
   };
