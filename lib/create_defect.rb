@@ -43,15 +43,15 @@ STYLES
     Description:
     <br>
 
-    <textarea name="defect_body" style="width: 350px;" rows="11">h3. Steps to Reproduce
+    <textarea name="defect_body" style="width: 350px;" rows="11">h3%2E; Steps to Reproduce
 
 
 
-h3. Actual Result
+h3%2E; Actual Result
 
 
 
-h3. Expected Result
+h3%2E; Expected Result
 
 </textarea>
     <br><br>

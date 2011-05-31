@@ -10,18 +10,24 @@ function createDefect(project, thisCard) {
     for (var key in properties) {
       params += param(key, properties[key]);
     }
-    post('/api/v2/projects/'+project+'/cards.xml?'+params);
+    post('/api/v2/projects/'+project+'/cards.xml', params);
   };
 
-  function post(url) {
-    var request = new XMLHttpRequest();
-    request.open('POST', url, false);
-    request.send();
+  function post(url, params) {
+    var http = new XMLHttpRequest();
+    http.open("POST", url, true);
+
+    //Send the proper header information along with the request
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    http.setRequestHeader("Content-length", params.length);
+    http.setRequestHeader("Connection", "close");
+
+    http.send(params);
   }
 
   return function() {
     var title = document.createdefectform.defect_title.value;
-    var body = document.createdefectform.defect_body.value;    
+    var body = document.createdefectform.defect_body.value;
 
     var spinner = '<img class="ajax-spinner" src="/images/spinner.gif" alt="Loading..."/>';
     $('submit-defect').replace(spinner);
