@@ -27,7 +27,7 @@ function createDefect(project, current_user, thisCard) {
     var user_is_owner = document.createdefectform.defect_owner.checked;
 
     var card_params = {'Deliverable': thisCard,
-                       'Defect Status': 'New',
+                       'Defect Status': 'Open',
                        'Reported By': current_user,
                        'Team': team}
 
