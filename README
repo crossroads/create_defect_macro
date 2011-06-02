@@ -4,5 +4,13 @@ Mingle Macro - Create Defect
 Inserts a form into the story markup to quickly create a defect for that story.
 
 * Original code: Ben Butler-Cole, from http://community.thoughtworks.com/posts/97a2c29d6e
-* Modified for Crossroads, added unit tests: Nathan B
+* Modified for Crossroads, added unit tests, extended as fully-featured & embeddable form: Nathan B
+
+
+== Usage
+
+{{ create_defect }}
+
+
+This will give you a 'CREATE NEW DEFECT' button. When clicked, the button will be replaced with the defect form.
 
