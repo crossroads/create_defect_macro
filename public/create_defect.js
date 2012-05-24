@@ -27,7 +27,7 @@ function createDefect(project, current_user, thisCard) {
     var user_is_owner = document.createdefectform.defect_owner.checked;
 
     var card_params = {'Deliverable': thisCard,
-                       'Defect Status': 'Open',
+                       'Status': 'Open',
                        'Reported By': current_user,
                        'Team': team}
 
@@ -41,4 +41,3 @@ function createDefect(project, current_user, thisCard) {
     window.location.reload(true);
   };
 }
-
