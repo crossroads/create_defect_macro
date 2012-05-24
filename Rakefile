@@ -4,3 +4,5 @@ Dir['tasks/**/*.rake'].each { |t| load t }
 
 desc "Runs all units and integration tests"
 task :test => ['test:units', 'test:integration']
+
+task :default => ['test']
